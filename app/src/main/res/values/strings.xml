@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Apply Assistant</string>
+    <string name="englishBtn">English Tests</string>
+    <string name="visaBtn">Visa Process</string>
+    <string name="applyBtn">How to Apply</string>
+    <string name="CostOfLivingBtn">Cost of Living</string>
+    <string name="resourcesBtn">Document Templates</string>
+    <string name="actionAboutUsBtn">About Us</string>
+    <string name="aboutUs">We are M.Sc students at York University and this app is a small contribution in
+        return for the many helps we received back when we were trying to move to Canada.</string>
+    <string name="actionContactUsBtn">Contact Us</string>
+    <string name="contactUs"> We would be more than happy to know what you think about our app! You can also join
+     our Instagram page! Cheers all! </string>
+
+</resources>
