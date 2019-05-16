@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.util.Log
+import android.net.Uri
 import android.view.*
 import android.widget.*
 import kotlinx.android.synthetic.main.dialog_about_us.view.*
@@ -56,6 +57,11 @@ class MainActivity : AppCompatActivity() {
             R.id.actionbar_contact -> {
                 val mDialogView = LayoutInflater.from(this).inflate(R.layout.dialog_contact_us, null)
                 mDialogView.actionContactUsTxt.text = resources.getString(R.string.contactUs)
+                mDialogView.instagramImgHolder.setOnClickListener(){
+                    intent = Intent(Intent.ACTION_VIEW)
+                    intent.setData(Uri.parse("https://www.instagram.com/narges_canada/"))
+                    startActivity(intent)
+                }
                 val builder = AlertDialog.Builder(this).setView(mDialogView)
                 builder.setTitle("Contact Us")
                 val contactUs = builder.create()
