@@ -10,19 +10,29 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:justificationMode="inter_word"
-            android:paddingStart="9dp"
-            android:paddingEnd="5dp"
+            android:paddingLeft="9dp"
+            android:paddingRight="5dp"
             android:paddingTop="10dp"
             android:paddingBottom="5dp"
-            app:layout_constraintStart_toStartOf="@+id/instagramImgHolder"
-            app:layout_constraintEnd_toEndOf="@+id/instagramImgHolder" app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="10dp"/>
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="10dp" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"/>
     <ImageView
-            android:layout_width="92dp"
-            android:layout_height="68dp" app:srcCompat="@drawable/instagram"
+            android:layout_width="76dp"
+            android:layout_height="67dp" app:srcCompat="@drawable/instagram"
             android:id="@+id/instagramImgHolder"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/actionContactUsTxt" android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            android:layout_marginLeft="104dp" android:layout_marginStart="104dp"/>
+    <ImageView
+            android:layout_width="68dp"
+            android:layout_height="67dp" app:srcCompat="@drawable/gmail"
+            android:id="@+id/gmailImgHolder" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/instagramImgHolder"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/actionContactUsTxt" android:layout_marginTop="68dp"
-            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"/>
+            android:layout_marginEnd="116dp"
+            android:layout_marginRight="116dp"
+            app:layout_constraintTop_toTopOf="@+id/instagramImgHolder" app:layout_constraintVertical_bias="0.333"/>
 </android.support.constraint.ConstraintLayout>

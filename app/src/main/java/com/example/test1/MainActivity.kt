@@ -58,8 +58,14 @@ class MainActivity : AppCompatActivity() {
                 val mDialogView = LayoutInflater.from(this).inflate(R.layout.dialog_contact_us, null)
                 mDialogView.actionContactUsTxt.text = resources.getString(R.string.contactUs)
                 mDialogView.instagramImgHolder.setOnClickListener(){
-                    intent = Intent(Intent.ACTION_VIEW)
+                    val intent = Intent(Intent.ACTION_VIEW)
                     intent.setData(Uri.parse("https://www.instagram.com/narges_canada/"))
+                    startActivity(intent)
+                }
+                mDialogView.gmailImgHolder.setOnClickListener(){
+                    val intent = Intent(Intent.ACTION_SENDTO)
+                    intent.data = Uri.parse("mailto:arinaseh@gmail.com")
+                    intent.putExtra(Intent.EXTRA_SUBJECT, "FeedBack: Apply Assistant")
                     startActivity(intent)
                 }
                 val builder = AlertDialog.Builder(this).setView(mDialogView)
