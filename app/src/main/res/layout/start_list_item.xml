@@ -7,7 +7,6 @@
         android:layout_height="wrap_content">
 
     <TextView
-            android:text="Title"
             app:layout_constraintHorizontal_weight="1"
             android:gravity="center_vertical"
             android:layout_width="333dp"
@@ -23,7 +22,6 @@
     <TextView
             android:gravity="start"
             app:layout_constraintHorizontal_weight="1"
-            android:text="Hint"
             android:layout_width="333dp"
             android:layout_height="22dp"
             android:id="@+id/listSubTitle"

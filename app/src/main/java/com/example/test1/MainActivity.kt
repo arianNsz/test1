@@ -15,8 +15,8 @@ import kotlinx.android.synthetic.main.dialog_contact_us.view.*
 
 class MainActivity : AppCompatActivity() {
 
-    var listTitles = arrayOf("Apply as a Student", "English Tests", "Visa Process", "Cost of Living", "Sample Documents")
-    var listSubTitles= arrayOf("Finding a university/supervisor - Requirements - etc.",
+    private val listTitles = arrayOf("ApplyActivity as a Student", "English Tests", "Visa Process", "Cost of Living", "Sample Documents")
+    private val listSubTitles= arrayOf("Finding a university/supervisor - Requirements - etc.",
         "TOEFL - ILETS - Which one to take", "Required Documents - Translations - etc.", "Housing - Food - Transportation - etc.",
         "Cover Letters - SoP - Client Information - etc.")
 
@@ -28,6 +28,8 @@ class MainActivity : AppCompatActivity() {
         listV.adapter = MyCostumeAdapter(this, listTitles, listSubTitles)
         listV.setOnItemClickListener{ adapterView: AdapterView<*>, view1: View, i: Int, l: Long ->
             when(i){
+                0 -> {val intent = Intent(this, ApplyActivity::class.java)
+                    startActivity(intent)}
                 1 -> {val intent = Intent(this, English_Activity::class.java)
                     startActivity(intent)}
             }
@@ -65,7 +67,7 @@ class MainActivity : AppCompatActivity() {
                 mDialogView.gmailImgHolder.setOnClickListener(){
                     val intent = Intent(Intent.ACTION_SENDTO)
                     intent.data = Uri.parse("mailto:arinaseh@gmail.com")
-                    intent.putExtra(Intent.EXTRA_SUBJECT, "FeedBack: Apply Assistant")
+                    intent.putExtra(Intent.EXTRA_SUBJECT, "FeedBack: ApplyActivity Assistant")
                     startActivity(intent)
                 }
                 val builder = AlertDialog.Builder(this).setView(mDialogView)
