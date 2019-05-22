@@ -49,25 +49,21 @@ class ApplyActivity : AppCompatActivity() {
             currentTitle.text = listMainTitle[position]
             currentSubtitle.text= listSubTitles[position]
             return startPageItem
-            //TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
         }
 
         // ignore for the time being
         override fun getItem(position: Int): Any {
             return "TEST STRING"
-            // TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
         }
 
         // ignore the time being
         override fun getItemId(position: Int): Long {
             return position.toLong()
-            // TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
         }
 
         // responsible to count how many rows are in the list
         override fun getCount(): Int {
             return 5
-//            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
         }
 
     }

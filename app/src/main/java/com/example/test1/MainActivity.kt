@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
                 mDialogView.actionContactUsTxt.text = resources.getString(R.string.contactUs)
                 mDialogView.instagramImgHolder.setOnClickListener(){
                     val intent = Intent(Intent.ACTION_VIEW)
-                    intent.setData(Uri.parse("https://www.instagram.com/narges_canada/"))
+                    intent.data = Uri.parse("https://www.instagram.com/narges_canada/")
                     startActivity(intent)
                 }
                 mDialogView.gmailImgHolder.setOnClickListener(){
@@ -98,25 +98,21 @@ class MainActivity : AppCompatActivity() {
             currentTitle.text = listMainTitle[position]
             currentSubtitle.text= listSubTitles[position]
             return startPageItem
-            //TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
         }
 
         // ignore for the time being
         override fun getItem(position: Int): Any {
             return "TEST STRING"
-            // TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
         }
 
         // ignore the time being
         override fun getItemId(position: Int): Long {
             return position.toLong()
-            // TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
         }
 
         // responsible to count how many rows are in the list
         override fun getCount(): Int {
             return 5
-//            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
         }
 
     }
